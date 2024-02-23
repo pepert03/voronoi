@@ -1,2 +1,2 @@
-# voronoi
-A Voronoi diagram and Delaunay triangulation generator
+### Voronoi & Delaunay
+A visualization of the Voronoi and Delaunay diagrams

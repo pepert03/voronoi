@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voronoi</title>
+    <style>
+        svg {
+            position: absolute;
+            width: 99%;
+            height: 99%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var points = []; // Create an empty array to store the points
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener("click", function(event) {
+                var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                circle.setAttribute("cx", event.clientX - 6); // Subtract 6 from the x-coordinate
+                circle.setAttribute("cy", event.clientY - 6); // Subtract 6 from the y-coordinate
+                circle.setAttribute("r", "6");
+                circle.setAttribute("fill", "red");
+                svg.appendChild(circle);
+                document.body.appendChild(svg);
+
+                var point = { // Create an object to represent the point
+                    x: event.clientX,
+                    y: event.clientY
+                };
+
+                points.push(point); // Add the point to the array
+            });
+        });
+
+        function voronoi(points) {
+            // Your code here
+            // utilizar la funcion voronoi de voronoi.py
+
+            python = require('python-shell');
+            var options = {
+                mode: 'text',
+                pythonPath: '/usr/bin/python3',
+                pythonOptions: ['-u'],
+                scriptPath: '/path/to/my/scripts',
+                args: ['value1', 'value2', 'value3']
+            };
+            
+        }
+    </script>
+</body>
+</html>
